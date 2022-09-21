@@ -1,8 +1,153 @@
+:root {
+  --bright-orange: #E38826;
+  --dark-cyan: #006970;
+  --very-dark-cyan: #004241;
+  --transparent-white: #FFFFFFBF;
+  --very-light-gray: #F2F2F2;
+  
+  --family-heading: 'Big Shoulders Display', cursive;
+  --family-paragraph: 'Lexend Deca', sans-serif;
+  
+  --size-heading: 40px;
+  --size-paragraph: 15px;
+
+  --weight-heading: 700;
+  --weight-paragraph: 400;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  background-color: var(--very-light-gray);
+}
+
+.main {
+  padding: 88px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 10px 24px 2px #00000055;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card {
+  padding: 48px;
+  width: 330px;
+  height: 442px;
+}
+
+.card:nth-child(1) {
+  background-color: var(--bright-orange);
+}
+
+.card:nth-child(2) {
+  background-color: var(--dark-cyan);
+}
+
+.card:nth-child(3) {
+  background-color: var(--very-dark-cyan);
+}
+
+.card__wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.card__infos {}
+
+.card__icon {}
+
+.card__title {
+  font-family: var(--family-heading);
+  font-size: var(--size-heading);
+  font-weight: var(--weight-heading);
+  color: var(--very-light-gray);
+  text-transform: uppercase;
+  margin: 28px 0;
+}
+
+.card__description {
+  color: var(--transparent-white);
+}
+
+.text {
+  font-family: var(--family-paragraph);
+  font-size: var(--size-paragraph);
+  font-weight: var(--weight-paragraph);
+  line-height: 25px;
+}
+
+.card__button {}
+
+.card__button .button {
+  cursor: pointer;
+  background-color: var(--very-light-gray);
+  border: 2px solid var(--very-light-gray);
+  border-radius: 24px;
+  height: 48px;
+  width: 146px;
+}
+
+.card:nth-child(1) .button {
+  color: var(--bright-orange);
+}
+
+.card:nth-child(2) .button {
+  color: var(--dark-cyan);
+}
+
+.card:nth-child(3) .button {
+  color: var(--very-dark-cyan);
+}
+
+.card__button .button:hover {
+  background-color: transparent;
+  color: var(--very-light-gray);
+}
+
 .attribution {
+  padding: 1px;
   font-size: 11px;
   text-align: center;
 }
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 920px) {
+
+  .main {
+    height: 100vh;
+  }
+  
+  .cards {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .card {
+    width: 306px;
+    height: 500px;
+  }
 }
